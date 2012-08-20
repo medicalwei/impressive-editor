@@ -24,6 +24,7 @@ install: impressiveEditorUI.py
 	install -m755 impressive-editor.py ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 impressiveEditorUI.py ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 infoscript-tools.py ${INSTALL_DIR}/share/impressive-editor/
+	install -m644 loading.png ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 locales/*.qm ${INSTALL_DIR}/share/impressive-editor/locales/
 
 	install -m644 data/impressive-editor.svg ${INSTALL_DIR}/share/pixmaps/
