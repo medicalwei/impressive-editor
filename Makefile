@@ -13,10 +13,10 @@ clean:
 	rm -f locales/*.qm
 
 install: impressiveEditorUI.py
-	install -d ${PREFIX}/share/impressive-editor
-	install -d ${PREFIX}/share/impressive-editor/locales
-	install -d ${PREFIX}/share/pixmaps
-	install -d ${PREFIX}/share/applications
+	mkdir -p ${PREFIX}/share/impressive-editor
+	mkdir -p ${PREFIX}/share/impressive-editor/locales
+	mkdir -p ${PREFIX}/share/pixmaps
+	mkdir -p ${PREFIX}/share/applications
 
 	install impressive-editor.py ${PREFIX}/share/impressive-editor/
 	install impressiveEditorUI.py ${PREFIX}/share/impressive-editor/
