@@ -10,7 +10,7 @@ import sys
 import os
 import copy
 
-execfile("infoscript-tools.py")
+execfile(os.path.dirname(os.path.realpath(sys.argv[0]))+"/infoscript-tools.py")
 
 class MainWindow(QtGui.QMainWindow):
     def closeEvent(self, event):
@@ -343,7 +343,7 @@ if __name__ == "__main__":
     if qtTranslator.load("qt_"+locale):
         app.installTranslator(qtTranslator)
     appTranslator = QtCore.QTranslator()
-    if appTranslator.load("impressive-editor_"+locale, "./locales"):
+    if appTranslator.load("impressive-editor_"+locale, os.path.dirname(os.path.realpath(sys.argv[0]))+"/locales"):
         app.installTranslator(appTranslator)
 
     impressiveEditor = ImpressiveEditor()

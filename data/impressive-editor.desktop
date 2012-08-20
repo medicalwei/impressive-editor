@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Impressive Editor
+Name[zh_TW]=Impressive 編輯器
+Comment=Editor for Impressive presentation tool
+Comment[zh_TW]=Impressive 簡報工具的編輯器
+Exec=impressive-editor
+Terminal=false
+Type=Application
+Categories=Office;
+Icon=impressive-editor
+MimeType=application/pdf;
