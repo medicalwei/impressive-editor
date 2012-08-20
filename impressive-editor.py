@@ -9,8 +9,14 @@ import shutil
 import sys
 import os
 import copy
+import re
+from multiprocessing import Process
 
 execfile(os.path.dirname(os.path.realpath(sys.argv[0]))+"/infoscript-tools.py")
+
+class ThumbnailLoader(QtCore.QThread):
+    def run(self):
+        subprocess.call(['convert', impressiveEditor.FilePath, '-resize', '100x100', impressiveEditor.ImageDirectory+'/p.png'])
 
 class MainWindow(QtGui.QMainWindow):
     def closeEvent(self, event):
@@ -57,6 +63,9 @@ class ImpressiveEditor:
 
         self.UI.setupUi(self.MainWindow)
 
+        self.thumbnailLoader = ThumbnailLoader()
+        self.loadingIcon = QtGui.QIcon(os.path.dirname(os.path.realpath(sys.argv[0]))+"/loading.png")
+
         # set up transitions
         self.UI.transition.addItem(self.tr("Not Specified"), None)
         for transition in AllTransitions:
@@ -73,6 +82,7 @@ class ImpressiveEditor:
         self.UI.actionStart.triggered.connect(self.startPresentation)
         self.UI.actionUndo.triggered.connect(self.undo)
         self.UI.actionRedo.triggered.connect(self.redo)
+        self.thumbnailLoader.finished.connect(self.reloadThumbnail)
     
     def start(self):
         self.MainWindow.show()
@@ -98,25 +108,41 @@ class ImpressiveEditor:
             pass
         self.cleanTemp()
         self.UI.slides.clear()
+        self.thumbnailLoader.terminate()
         self.ImageDirectory = tempfile.mkdtemp()
-        subprocess.call(['convert', self.FilePath, '-resize', '100x100', self.ImageDirectory+'/p.png'])
         self.MainWindow.setWindowTitle(self.FilePath)
 
-        self.count = len(os.listdir(self.ImageDirectory))
+        pdfinfo = subprocess.Popen(['pdfinfo', self.FilePath], stdout=subprocess.PIPE).communicate()[0]
+        self.count = int(re.search('Pages: +(\d+)', pdfinfo).groups()[0])
+        (realWidth, realHeight) = map(int, re.search('Page size: +(\d+) x (\d+)', pdfinfo).groups())
+        if realWidth > realHeight:
+            (thumbnailWidth, thumbnailHeight) = (100, 100*realHeight/realWidth)
+        else:
+            (thumbnailWidth, thumbnailHeight) = (100*realWidth/realHeight, 100)
+        thumbnailQSize = QtCore.QSize(thumbnailWidth, thumbnailHeight)
 
         self.UI.slides.currentItemChanged.connect(self.currentSlideChanged)
 
         for i in range(self.count) :
-            icon = QtGui.QIcon("%s/p-%d.png" % (self.ImageDirectory, i))
-            item = QtGui.QListWidgetItem(icon, "")
+            item = QtGui.QListWidgetItem()
             # FIXME: workaround used here
             # http://stackoverflow.com/questions/9257422/how-to-get-the-original-python-data-from-qvariant
             item.setData(QtCore.Qt.UserRole, ({"id": i+1},))
+            item.setIcon(self.loadingIcon)
             self.updateStatus(item)
             self.UI.slides.addItem(item)
             if i == 0:
                 self.UI.slides.setCurrentItem(item)
 
+        self.UI.slides.setIconSize(thumbnailQSize)
+
+        self.thumbnailLoader.start()
+
+    def reloadThumbnail(self):
+        for i in range(self.count) :
+            item = self.UI.slides.item(i)
+            icon = QtGui.QIcon("%s/p-%d.png" % (self.ImageDirectory, i))
+            item.setIcon(icon)
 
     def loadProp(self, propPath):
         global InfoScriptPath
