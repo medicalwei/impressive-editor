@@ -1,16 +1,16 @@
-
 DESTDIR=
 PREFIX=$(DESTDIR)/usr
 
-make: impressiveEditorUI.ui
+make: impressiveEditorUI.ui impressive-editor.pro
 	pyuic4 -o impressiveEditorUI.py impressiveEditorUI.ui
 	lrelease impressive-editor.pro
 
 translate-update: impressiveEditorUI.ui
 	pylupdate4 impressive-editor.pro
 
-clean: impressiveEditorUI.py
-	rm impressiveEditorUI.py
+clean:
+	rm -f impressiveEditorUI.py
+	rm -f locales/*.qm
 
 install: impressiveEditorUI.py
 	install -d ${PREFIX}/share/impressive-editor
