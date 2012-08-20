@@ -1,6 +1,6 @@
 '''
 
-These files are modified from impressive projects, used to read infoscript.
+These files are modified from impressive upstream, used to read infoscript.
 
 (c) 2010 Martin J. Fiedler.
 License: GPL v2
@@ -11,7 +11,7 @@ import types
 import traceback
 
 
-# XXX: Dirty hack for "classified" transition settings
+# HACK: Dirty hack for "classified" transition settings
 
 def Crossfade(): pass
 def FadeOutFadeIn(): pass
