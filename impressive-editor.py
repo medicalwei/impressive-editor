@@ -16,7 +16,7 @@ execfile(os.path.dirname(os.path.realpath(sys.argv[0]))+"/infoscript-tools.py")
 
 class ThumbnailLoader(QtCore.QThread):
     def run(self):
-        subprocess.call(['convert', impressiveEditor.FilePath, '-resize', '100x100', impressiveEditor.ImageDirectory+'/p.png'])
+        subprocess.call(['convert', "%s" % (impressiveEditor.FilePath), '-density', '600', '-resize', '100x100', "%s/p.png" % (impressiveEditor.ImageDirectory)])
 
 class MainWindow(QtGui.QMainWindow):
     def closeEvent(self, event):
@@ -114,7 +114,7 @@ class ImpressiveEditor:
 
         pdfinfo = subprocess.Popen(['pdfinfo', self.FilePath], stdout=subprocess.PIPE).communicate()[0]
         self.count = int(re.search('Pages: +(\d+)', pdfinfo).groups()[0])
-        (realWidth, realHeight) = map(int, re.search('Page size: +(\d+) x (\d+)', pdfinfo).groups())
+        (realWidth, realHeight) = map(float, re.search('Page size: +([0-9.]+) x ([0-9.]+)', pdfinfo).groups())
         if realWidth > realHeight:
             (thumbnailWidth, thumbnailHeight) = (100, 100*realHeight/realWidth)
         else:
@@ -139,10 +139,10 @@ class ImpressiveEditor:
         self.thumbnailLoader.start()
 
     def reloadThumbnail(self):
-        for i in range(self.count) :
-            item = self.UI.slides.item(i)
-            icon = QtGui.QIcon("%s/p-%d.png" % (self.ImageDirectory, i))
-            item.setIcon(icon)
+        for i in range(self.count):
+          item = self.UI.slides.item(i)
+          icon = QtGui.QIcon("%s/p-%d.png" % (self.ImageDirectory, i))
+          item.setIcon(icon)
 
     def loadProp(self, propPath):
         global InfoScriptPath
@@ -375,5 +375,6 @@ if __name__ == "__main__":
     impressiveEditor = ImpressiveEditor()
     impressiveEditor.start()
     ret = app.exec_()
+    impressiveEditor.thumbnailLoader.terminate()
     impressiveEditor.cleanTemp()
     sys.exit(ret)
