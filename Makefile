@@ -9,7 +9,7 @@ translate-update: impressiveEditorUI.ui
 clean: impressiveEditorUI.py
 	rm impressiveEditorUI.py
 
-install: impressiveEditorUI.ui
+install: impressiveEditorUI.py
 	install -d ${PREFIX}/share/impressive-editor
 	install -d ${PREFIX}/share/impressive-editor/locales
 	install -d ${PREFIX}/share/pixmaps
