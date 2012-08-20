@@ -1,6 +1,6 @@
 DESTDIR=
 PREFIX=/usr
-INSTALL_DIR=$(DESTDIR)/usr
+INSTALL_DIR=${DESTDIR}${PREFIX}
 
 make: impressiveEditorUI.ui impressive-editor.pro
 	pyuic4 -o impressiveEditorUI.py impressiveEditorUI.ui
