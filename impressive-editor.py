@@ -276,7 +276,15 @@ class ImpressiveEditor:
 
     def startPresentationCall(self):
         # TODO: need impressive path
-        subprocess.call(['impressive', '--script', InfoScriptPath, self.FilePath])
+        try:
+            subprocess.call(['impressive', '--script', InfoScriptPath, self.FilePath])
+        except OSError:
+            ret = QtGui.QMessageBox.critical(
+                    self.MainWindow,
+                    self.tr("Presentation cannot be started."),
+                    self.tr("Presentation cannot be started.\nMake sure you have Impressive installed in your computer."),
+                    QtGui.QMessageBox.Ok
+                    )
 
     def saveCheck(self, accept, cancel=None, message=None):
         if not message:

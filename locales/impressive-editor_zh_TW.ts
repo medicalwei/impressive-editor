@@ -44,7 +44,7 @@
         <translation>轉⌚</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="286"/>
+        <location filename="impressive-editor.py" line="295"/>
         <source>The script has been modified.</source>
         <translation>投影片資訊已被修改。</translation>
     </message>
@@ -54,9 +54,20 @@
         <translation>是否要在開始簡報前儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="283"/>
+        <location filename="impressive-editor.py" line="292"/>
         <source>Do you want to save your changes?</source>
         <translation>是否要儲存您的變更？</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="282"/>
+        <source>Presentation cannot be started.</source>
+        <translation>簡報無法開始。</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="282"/>
+        <source>Presentation cannot be started.
+Make sure you have Impressive installed in your computer.</source>
+        <translation>無法開始簡報。請確認您的電腦是否有安裝 Impressive。</translation>
     </message>
 </context>
 <context>
