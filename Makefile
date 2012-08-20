@@ -30,7 +30,7 @@ install: impressiveEditorUI.py
 	install -m644 data/impressive-editor.desktop ${INSTALL_DIR}/share/applications/
 	install -m644 data/impressive-editor.1 ${INSTALL_DIR}/share/man/man1/
 
-	ln -fs ../share/impressive-editor/impressive-editor.py ${PREFIX}/bin/impressive-editor
+	ln -fs ${PREFIX}/share/impressive-editor/impressive-editor.py ${INSTALL_DIR}/bin/impressive-editor
 
 uninstall:
 	rm -rf ${PREFIX}/share/impressive-editor
