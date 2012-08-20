@@ -21,8 +21,8 @@ install: impressiveEditorUI.py
 	mkdir -p ${INSTALL_DIR}/share/man/man1/
 	mkdir -p ${INSTALL_DIR}/bin
 
-	install impressive-editor.py ${INSTALL_DIR}/share/impressive-editor/
-	install -m755 impressiveEditorUI.py ${INSTALL_DIR}/share/impressive-editor/
+	install -m755 impressive-editor.py ${INSTALL_DIR}/share/impressive-editor/
+	install -m644 impressiveEditorUI.py ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 infoscript-tools.py ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 locales/*.qm ${INSTALL_DIR}/share/impressive-editor/locales/
 
