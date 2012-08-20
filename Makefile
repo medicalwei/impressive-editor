@@ -17,6 +17,7 @@ install: impressiveEditorUI.py
 	mkdir -p ${PREFIX}/share/impressive-editor/locales
 	mkdir -p ${PREFIX}/share/pixmaps
 	mkdir -p ${PREFIX}/share/applications
+	mkdir -p ${PREFIX}/bin
 
 	install impressive-editor.py ${PREFIX}/share/impressive-editor/
 	install impressiveEditorUI.py ${PREFIX}/share/impressive-editor/
@@ -33,4 +34,4 @@ uninstall:
 	rm -f ${PREFIX}/bin/impressive-editor
 	rm -f ${PREFIX}/share/pixmaps/impressive-editor.svg
 	rm -f ${PREFIX}/share/applications/impressive-editor.desktop
-	rmdir --ignore-fail-on-non-empty ${PREFIX}/share/pixmaps/ ${PREFIX}/share/applications/
+	rmdir --ignore-fail-on-non-empty ${PREFIX}/share/pixmaps/ ${PREFIX}/share/applications/ ${PREFIX}/bin/ ${PREFIX}/share/ ${PREFIX}
