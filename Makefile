@@ -1,4 +1,7 @@
-PREFIX=/usr/local
+
+DESTDIR=
+PREFIX=$(DESTDIR)/usr
+
 make: impressiveEditorUI.ui
 	pyuic4 -o impressiveEditorUI.py impressiveEditorUI.ui
 	lrelease impressive-editor.pro
