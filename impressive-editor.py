@@ -368,27 +368,28 @@ class ImpressiveEditor:
 <p>Editor for Impressive presentation tool</p>
 <p>Yao Wei &lt;<a href="mailto:mwei@lxde.org">mwei@lxde.org</a>&gt;</p>
 <p>Licensed under GNU GPL v2<br>
-(see COPYING or distro-specific locations for details)</p>''')
-                )
+(see COPYING or distro-specific locations for details)</p>
+'''))
 
     def guide(self, s):
         QtGui.QMessageBox.information(self.MainWindow, self.tr("Starter Guide"),
-                self.tr(''' <p>Impressive itself is a simple presentation tool which makes PDF vivid.</p>
+                self.tr('''
+<p>Impressive itself is a simple presentation tool which makes PDF vivid.</p>
 <h2>Basics</h2>
-<ul>
-<li>“F5” — start presentation</li>
-<li>“Page Down”, “Space Bar” — Next Slide</li>
-<li>“Page Up” or “Backspace” — Previous Slide</li>
-</ul>
+<b>F5</b> &mdash; Start Presentation<br>
+<b>Page Down</b>, <b>Space Bar</b> &mdash; Next Slide<br>
+<b>Page Up</b>, <b>Backspace</b> &mdash; Previous Slide<br>
+<b>Tab</b> &mdash; Show Overview<br>
+<b>Q</b>, <b>Esc</b> &mdash; Exit Presentation
 <h2>Focus and Spotlight</h2>
-<ul>
-<li>Drag Rectangle with Left Mouse Click — Focus</li>
-<li>Right Mouse Click on Rectangle — Defocus</li>
-<li>“Enter” — Spotlight</li>
-<li>“+”, “-” — Spotlight Zoom</li>
-</ul>
-''')
-                )
+Drag Rectangle with <b>Left Mouse Button</b> &mdash; Focus<br>
+<b>Right Mouse Click</b> on Rectangle &mdash; Remove Focus<br>
+<b>Enter</b> &mdash; Spotlight<br>
+<b>+</b>, <b>-</b> &mdash; Spotlight Zoom
+<h2>Zooming</h2>
+<b>Z</b> &mdash; Toggle Zooming<br>
+Dragging with <b>Right Mouse Button</b> when Zooming &mdash; Panning
+'''))
 
     def tr(self, s):
         return QtCore.QCoreApplication.translate("ImpressiveEditor", s)

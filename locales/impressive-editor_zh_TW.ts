@@ -9,98 +9,124 @@
         <translation>不指定</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="165"/>
+        <location filename="impressive-editor.py" line="166"/>
         <source>Save Info Script</source>
         <translation>儲存附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="180"/>
+        <location filename="impressive-editor.py" line="181"/>
         <source>Open Slide</source>
         <translation>開啟投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="201"/>
+        <location filename="impressive-editor.py" line="202"/>
         <source>Open Info Script</source>
         <translation>開啟附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="236"/>
+        <location filename="impressive-editor.py" line="237"/>
         <source>Slide</source>
         <translation>投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="239"/>
+        <location filename="impressive-editor.py" line="240"/>
         <source>Skipped</source>
         <translation>跳過</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="243"/>
+        <location filename="impressive-editor.py" line="244"/>
         <source>T</source>
         <translation>轉</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="247"/>
+        <location filename="impressive-editor.py" line="248"/>
         <source>T@</source>
         <translation>轉⌚</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="325"/>
+        <location filename="impressive-editor.py" line="326"/>
         <source>The script has been modified.</source>
         <translation>投影片資訊已被修改。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="306"/>
+        <location filename="impressive-editor.py" line="307"/>
         <source>Do you want to save your changes before start presentation?</source>
         <translation>是否要在開始簡報前儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="322"/>
+        <location filename="impressive-editor.py" line="323"/>
         <source>Do you want to save your changes?</source>
         <translation>是否要儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="313"/>
+        <location filename="impressive-editor.py" line="314"/>
         <source>Presentation cannot be started.</source>
         <translation>簡報無法開始。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="313"/>
+        <location filename="impressive-editor.py" line="314"/>
         <source>Presentation cannot be started.
 Make sure you have Impressive installed in your computer.</source>
         <translation>無法開始簡報。請確認您的電腦是否有安裝 Impressive。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="365"/>
+        <location filename="impressive-editor.py" line="366"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="365"/>
-        <source>Impressive Editor
-Editor for Impressive presentation tool
-
-Yao Wei &lt;mwei@lxde.org&gt;
-                    
-Licensed under GPL v2 (see COPYING or distro-specific locations for details)</source>
-        <translation type="obsolete">Impressive 編輯器
-Impressive 簡報工具程式的編輯器
-
-Yao Wei (魏銘廷) &lt;mwei@lxde.org&gt;
-
-本應用程式採 GPL v2 授權 (詳見 COPYING 或是發行版特定的版權宣告位置)</translation>
-    </message>
-    <message>
-        <location filename="impressive-editor.py" line="365"/>
+        <location filename="impressive-editor.py" line="366"/>
         <source>&lt;h1&gt;Impressive Editor&lt;/h1&gt;
 &lt;p&gt;Editor for Impressive presentation tool&lt;/p&gt;
 &lt;p&gt;Yao Wei &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
 &lt;p&gt;Licensed under GNU GPL v2&lt;br&gt;
-(see COPYING or distro-specific locations for details)&lt;/p&gt;</source>
+(see COPYING or distro-specific locations for details)&lt;/p&gt;
+</source>
         <translation>&lt;h1&gt;Impressive 編輯器&lt;/h1&gt;
 &lt;p&gt;Impressive 簡報工具程式的編輯器&lt;/p&gt;
 &lt;p&gt;Yao Wei (魏銘廷) &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
 &lt;p&gt;本應用程式採 GNU GPL v2 授權&lt;br&gt;
 (詳見 COPYING 或是發行版特定的版權宣告位置)&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="375"/>
+        <source>Starter Guide</source>
+        <translation>新手指南</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="375"/>
+        <source>
+&lt;p&gt;Impressive itself is a simple presentation tool which makes PDF vivid.&lt;/p&gt;
+&lt;h2&gt;Basics&lt;/h2&gt;
+&lt;b&gt;F5&lt;/b&gt; &amp;mdash; Start Presentation&lt;br&gt;
+&lt;b&gt;Page Down&lt;/b&gt;, &lt;b&gt;Space Bar&lt;/b&gt; &amp;mdash; Next Slide&lt;br&gt;
+&lt;b&gt;Page Up&lt;/b&gt;, &lt;b&gt;Backspace&lt;/b&gt; &amp;mdash; Previous Slide&lt;br&gt;
+&lt;b&gt;Tab&lt;/b&gt; &amp;mdash; Show Overview&lt;br&gt;
+&lt;b&gt;Q&lt;/b&gt;, &lt;b&gt;Esc&lt;/b&gt; &amp;mdash; Exit Presentation
+&lt;h2&gt;Focus and Spotlight&lt;/h2&gt;
+Drag Rectangle with &lt;b&gt;Left Mouse Button&lt;/b&gt; &amp;mdash; Focus&lt;br&gt;
+&lt;b&gt;Right Mouse Click&lt;/b&gt; on Rectangle &amp;mdash; Remove Focus&lt;br&gt;
+&lt;b&gt;Enter&lt;/b&gt; &amp;mdash; Spotlight&lt;br&gt;
+&lt;b&gt;+&lt;/b&gt;, &lt;b&gt;-&lt;/b&gt; &amp;mdash; Spotlight Zoom
+&lt;h2&gt;Zooming&lt;/h2&gt;
+&lt;b&gt;Z&lt;/b&gt; &amp;mdash; Toggle Zooming&lt;br&gt;
+Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Panning
+</source>
+        <translation>&lt;p&gt;Impressive 可以使您的 PDF 簡報更加生動。&lt;/p&gt;
+&lt;h2&gt;基本操作&lt;/h2&gt;
+&lt;li&gt;&lt;b&gt;F5&lt;/b&gt; &amp;mdash;&amp;mdash; 開始簡報&lt;/li&gt;
+&lt;b&gt;Page Down&lt;/b&gt;, &lt;b&gt;空白鍵&lt;/b&gt; &amp;mdash;&amp;mdash; 下一張簡報&lt;br&gt;
+&lt;b&gt;Page Up&lt;/b&gt;, &lt;b&gt;Backspace&lt;/b&gt; &amp;mdash;&amp;mdash; 上一張簡報&lt;br&gt;
+&lt;b&gt;Tab&lt;/b&gt; &amp;mdash;&amp;mdash; 檢視縮圖&lt;br&gt;
+&lt;b&gt;Q&lt;/b&gt;, &lt;b&gt;Esc&lt;/b&gt; &amp;mdash;&amp;mdash; 離開簡報
+&lt;h2&gt;重點與聚焦&lt;/h2&gt;
+以&lt;b&gt;滑鼠左鍵&lt;/b&gt;畫出矩形 &amp;mdash;&amp;mdash; 重點&lt;br&gt;
+以&lt;b&gt;滑鼠右鍵&lt;/b&gt;點選重點 &amp;mdash;&amp;mdash; 移除重點&lt;br&gt;
+&lt;b&gt;Enter&lt;/b&gt; &amp;mdash;&amp;mdash; 聚焦&lt;br&gt;
+&lt;b&gt;+&lt;/b&gt;, &lt;b&gt;-&lt;/b&gt; &amp;mdash;&amp;mdash; 調整聚焦大小
+&lt;h2&gt;放大&lt;/h2&gt;
+&lt;b&gt;Z&lt;/b&gt; &amp;mdash;&amp;mdash; 切換放大功能&lt;br&gt;
+放大時以&lt;b&gt;滑鼠右鍵&lt;/b&gt;拖曳 &amp;mdash;&amp;mdash; 移動放大範圍</translation>
     </message>
 </context>
 <context>
@@ -234,16 +260,6 @@ Yao Wei (魏銘廷) &lt;mwei@lxde.org&gt;
         <location filename="impressiveEditorUI.ui" line="234"/>
         <source>Ctrl+Shift+V</source>
         <translation>Ctrl+Shift+V</translation>
-    </message>
-    <message>
-        <location filename="impressive-editor.py" line="23"/>
-        <source>The script has been modified.</source>
-        <translation type="obsolete">投影片資訊已被修改。</translation>
-    </message>
-    <message>
-        <location filename="impressive-editor.py" line="23"/>
-        <source>Do you want to save your changes?</source>
-        <translation type="obsolete">是否要儲存您的變更？</translation>
     </message>
     <message>
         <location filename="impressiveEditorUI.ui" line="242"/>
