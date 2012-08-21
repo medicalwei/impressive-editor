@@ -85,6 +85,7 @@ class ImpressiveEditor:
         self.UI.actionUndo.triggered.connect(self.undo)
         self.UI.actionRedo.triggered.connect(self.redo)
         self.UI.actionAbout.triggered.connect(self.about)
+        self.UI.actionStarterGuide.triggered.connect(self.guide)
         self.thumbnailLoader.finished.connect(self.reloadThumbnail)
 
     def start(self):
@@ -363,12 +364,30 @@ class ImpressiveEditor:
 
     def about(self, s):
         QtGui.QMessageBox.about(self.MainWindow, self.tr("About"),
-                self.tr('''Impressive Editor
-Editor for Impressive presentation tool
+                self.tr('''<h1>Impressive Editor</h1>
+<p>Editor for Impressive presentation tool</p>
+<p>Yao Wei &lt;<a href="mailto:mwei@lxde.org">mwei@lxde.org</a>&gt;</p>
+<p>Licensed under GNU GPL v2<br>
+(see COPYING or distro-specific locations for details)</p>''')
+                )
 
-Yao Wei <mwei@lxde.org>
-                    
-Licensed under GPL v2 (see COPYING or distro-specific locations for details)''')
+    def guide(self, s):
+        QtGui.QMessageBox.information(self.MainWindow, self.tr("Starter Guide"),
+                self.tr(''' <p>Impressive itself is a simple presentation tool which makes PDF vivid.</p>
+<h2>Basics</h2>
+<ul>
+<li>“F5” — start presentation</li>
+<li>“Page Down”, “Space Bar” — Next Slide</li>
+<li>“Page Up” or “Backspace” — Previous Slide</li>
+</ul>
+<h2>Focus and Spotlight</h2>
+<ul>
+<li>Drag Rectangle with Left Mouse Click — Focus</li>
+<li>Right Mouse Click on Rectangle — Defocus</li>
+<li>“Enter” — Spotlight</li>
+<li>“+”, “-” — Spotlight Zoom</li>
+</ul>
+''')
                 )
 
     def tr(self, s):

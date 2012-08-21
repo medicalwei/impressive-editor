@@ -134,7 +134,7 @@
     <property name="title">
      <string>&amp;Help</string>
     </property>
-    <addaction name="actionBasic_Usage"/>
+    <addaction name="actionStarterGuide"/>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
    </widget>
@@ -256,7 +256,7 @@
     <string>Ctrl+Shift+Z</string>
    </property>
   </action>
-  <action name="actionBasic_Usage">
+  <action name="actionStarterGuide">
    <property name="text">
     <string>&amp;Starter Guide</string>
    </property>

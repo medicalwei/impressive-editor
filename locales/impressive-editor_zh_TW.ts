@@ -82,12 +82,25 @@ Editor for Impressive presentation tool
 Yao Wei &lt;mwei@lxde.org&gt;
                     
 Licensed under GPL v2 (see COPYING or distro-specific locations for details)</source>
-        <translation>Impressive 編輯器
+        <translation type="obsolete">Impressive 編輯器
 Impressive 簡報工具程式的編輯器
 
 Yao Wei (魏銘廷) &lt;mwei@lxde.org&gt;
 
 本應用程式採 GPL v2 授權 (詳見 COPYING 或是發行版特定的版權宣告位置)</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="365"/>
+        <source>&lt;h1&gt;Impressive Editor&lt;/h1&gt;
+&lt;p&gt;Editor for Impressive presentation tool&lt;/p&gt;
+&lt;p&gt;Yao Wei &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;Licensed under GNU GPL v2&lt;br&gt;
+(see COPYING or distro-specific locations for details)&lt;/p&gt;</source>
+        <translation>&lt;h1&gt;Impressive 編輯器&lt;/h1&gt;
+&lt;p&gt;Impressive 簡報工具程式的編輯器&lt;/p&gt;
+&lt;p&gt;Yao Wei (魏銘廷) &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;本應用程式採 GNU GPL v2 授權&lt;br&gt;
+(詳見 COPYING 或是發行版特定的版權宣告位置)&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
