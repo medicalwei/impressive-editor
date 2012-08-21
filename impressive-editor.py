@@ -83,7 +83,7 @@ class ImpressiveEditor:
         self.UI.actionUndo.triggered.connect(self.undo)
         self.UI.actionRedo.triggered.connect(self.redo)
         self.thumbnailLoader.finished.connect(self.reloadThumbnail)
-    
+
     def start(self):
         self.MainWindow.show()
         self.actionOpen()
@@ -140,9 +140,9 @@ class ImpressiveEditor:
 
     def reloadThumbnail(self):
         for i in range(self.count):
-          item = self.UI.slides.item(i)
-          icon = QtGui.QIcon("%s/p-%d.png" % (self.ImageDirectory, i))
-          item.setIcon(icon)
+            item = self.UI.slides.item(i)
+            icon = QtGui.QIcon("%s/p-%d.png" % (self.ImageDirectory, i))
+            item.setIcon(icon)
 
     def loadProp(self, propPath):
         global InfoScriptPath
@@ -150,12 +150,12 @@ class ImpressiveEditor:
         LoadInfoScript()
         self.notSaved = False
         self.historyRecorder = HistoryRecorder(PageProps)
-    
+
     def actionSave(self):
         SaveInfoScript(InfoScriptPath)
         self.notSaved = False
         return True
-    
+
     def actionSaveAs(self):
         f = QtGui.QFileDialog.getSaveFileName(self.MainWindow, self.tr("Save Info Script"), "", "Info Script (*info)")
         if not f:
@@ -163,9 +163,9 @@ class ImpressiveEditor:
         SaveInfoScript(str(f))
         self.notSaved = False
         return True
-    
+
     def cleanTemp(self):
-        if self.ImageDirectory != "": 
+        if self.ImageDirectory != "":
             shutil.rmtree(self.ImageDirectory)
 
     def actionOpen(self):
@@ -181,14 +181,14 @@ class ImpressiveEditor:
 
         self.loadProp(propPath)
         self.loadSlide()
-    
+
         self.UI.actionOpenInfo.setEnabled(True)
         self.UI.actionSave.setEnabled(True)
         self.UI.actionSaveAs.setEnabled(True)
         self.UI.actionCopy.setEnabled(True)
 
         return True
-    
+
     def actionOpenInfo(self):
         impressiveEditor.saveCheck(self.actionOpenInfoCall)
 
@@ -202,7 +202,7 @@ class ImpressiveEditor:
 
     def actionQuit(self):
         self.MainWindow.close()
-    
+
     def currentSlideChanged(self, currentItem):
         self.disconnectConfigs()
         data = currentItem.data(QtCore.Qt.UserRole).toPyObject()[0]
