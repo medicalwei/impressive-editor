@@ -75,26 +75,12 @@ Make sure you have Impressive installed in your computer.</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="366"/>
-        <source>&lt;h1&gt;Impressive Editor&lt;/h1&gt;
-&lt;p&gt;Editor for Impressive presentation tool&lt;/p&gt;
-&lt;p&gt;Yao Wei &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
-&lt;p&gt;Licensed under GNU GPL v2&lt;br&gt;
-(see COPYING or distro-specific locations for details)&lt;/p&gt;
-</source>
-        <translation>&lt;h1&gt;Impressive 編輯器&lt;/h1&gt;
-&lt;p&gt;Impressive 簡報工具程式的編輯器&lt;/p&gt;
-&lt;p&gt;Yao Wei (魏銘廷) &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
-&lt;p&gt;本應用程式採 GNU GPL v2 授權&lt;br&gt;
-(詳見 COPYING 或是發行版特定的版權宣告位置)&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="impressive-editor.py" line="375"/>
+        <location filename="impressive-editor.py" line="376"/>
         <source>Starter Guide</source>
         <translation>新手指南</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="375"/>
+        <location filename="impressive-editor.py" line="376"/>
         <source>
 &lt;p&gt;Impressive itself is a simple presentation tool which makes PDF vivid.&lt;/p&gt;
 &lt;h2&gt;Basics&lt;/h2&gt;
@@ -105,7 +91,7 @@ Make sure you have Impressive installed in your computer.</source>
 &lt;b&gt;Q&lt;/b&gt;, &lt;b&gt;Esc&lt;/b&gt; &amp;mdash; Exit Presentation
 &lt;h2&gt;Focus and Spotlight&lt;/h2&gt;
 Drag Rectangle with &lt;b&gt;Left Mouse Button&lt;/b&gt; &amp;mdash; Focus&lt;br&gt;
-&lt;b&gt;Right Mouse Click&lt;/b&gt; on Rectangle &amp;mdash; Remove Focus&lt;br&gt;
+&lt;b&gt;Right Mouse Button&lt;/b&gt; on Rectangle &amp;mdash; Remove Focus&lt;br&gt;
 &lt;b&gt;Enter&lt;/b&gt; &amp;mdash; Spotlight&lt;br&gt;
 &lt;b&gt;+&lt;/b&gt;, &lt;b&gt;-&lt;/b&gt; &amp;mdash; Spotlight Zoom
 &lt;h2&gt;Zooming&lt;/h2&gt;
@@ -127,6 +113,22 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
 &lt;h2&gt;放大&lt;/h2&gt;
 &lt;b&gt;Z&lt;/b&gt; &amp;mdash;&amp;mdash; 切換放大功能&lt;br&gt;
 放大時以&lt;b&gt;滑鼠右鍵&lt;/b&gt;拖曳 &amp;mdash;&amp;mdash; 移動放大範圍</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="366"/>
+        <source>&lt;h1&gt;Impressive Editor&lt;/h1&gt;
+&lt;p&gt;Editor for Impressive presentation tool&lt;/p&gt;
+&lt;p&gt;Yao Wei &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/medicalwei/impressive-editor&quot;&gt;Fork me or report issues on GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Licensed under GNU GPL v2&lt;br&gt;
+(see COPYING or distro-specific locations for details)&lt;/p&gt;
+</source>
+        <translation>&lt;h1&gt;Impressive 編輯器&lt;/h1&gt;
+&lt;p&gt;Impressive 簡報工具程式的編輯器&lt;/p&gt;
+&lt;p&gt;Yao Wei (魏銘廷) &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/medicalwei/impressive-editor&quot;&gt;在 GitHub 取得本軟體的原始碼或回報問題&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本應用程式採 GNU GPL v2 授權&lt;br&gt;
+(詳見 COPYING 或是發行版特定的版權宣告位置)&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

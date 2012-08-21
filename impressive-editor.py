@@ -367,6 +367,7 @@ class ImpressiveEditor:
                 self.tr('''<h1>Impressive Editor</h1>
 <p>Editor for Impressive presentation tool</p>
 <p>Yao Wei &lt;<a href="mailto:mwei@lxde.org">mwei@lxde.org</a>&gt;</p>
+<p><a href="https://github.com/medicalwei/impressive-editor">Fork me or report issues on GitHub</a></p>
 <p>Licensed under GNU GPL v2<br>
 (see COPYING or distro-specific locations for details)</p>
 '''))
@@ -383,7 +384,7 @@ class ImpressiveEditor:
 <b>Q</b>, <b>Esc</b> &mdash; Exit Presentation
 <h2>Focus and Spotlight</h2>
 Drag Rectangle with <b>Left Mouse Button</b> &mdash; Focus<br>
-<b>Right Mouse Click</b> on Rectangle &mdash; Remove Focus<br>
+<b>Right Mouse Button</b> on Rectangle &mdash; Remove Focus<br>
 <b>Enter</b> &mdash; Spotlight<br>
 <b>+</b>, <b>-</b> &mdash; Spotlight Zoom
 <h2>Zooming</h2>
@@ -404,8 +405,11 @@ if __name__ == "__main__":
     if qtTranslator.load("qt_"+locale):
         app.installTranslator(qtTranslator)
     appTranslator = QtCore.QTranslator()
+    qtTranslator = QtCore.QTranslator()
     if appTranslator.load("impressive-editor_"+locale, os.path.dirname(os.path.realpath(sys.argv[0]))+"/locales"):
         app.installTranslator(appTranslator)
+    if qtTranslator.load("qt_"+locale, QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.TranslationsPath)):
+        app.installTranslator(qtTranslator)
 
     impressiveEditor = ImpressiveEditor()
     impressiveEditor.start()
