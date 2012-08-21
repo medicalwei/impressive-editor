@@ -10,13 +10,13 @@ import sys
 import os
 import copy
 import re
-from multiprocessing import Process
+import math
 
 execfile(os.path.dirname(os.path.realpath(sys.argv[0]))+"/infoscript-tools.py")
 
 class ThumbnailLoader(QtCore.QThread):
     def run(self):
-        subprocess.call(['convert', "%s" % (impressiveEditor.FilePath), '-density', '600', '-resize', '100x100', "%s/p.png" % (impressiveEditor.ImageDirectory)])
+        subprocess.call(["pdftocairo", "-png", "-scale-to", "100", impressiveEditor.FilePath, "%s/p" % (impressiveEditor.ImageDirectory)])
 
 class MainWindow(QtGui.QMainWindow):
     def closeEvent(self, event):
@@ -139,9 +139,11 @@ class ImpressiveEditor:
         self.thumbnailLoader.start()
 
     def reloadThumbnail(self):
+        zfillRate = int(math.log10(self.count+1))+1
         for i in range(self.count):
             item = self.UI.slides.item(i)
-            icon = QtGui.QIcon("%s/p-%d.png" % (self.ImageDirectory, i))
+            name = str(i+1).zfill(zfillRate)
+            icon = QtGui.QIcon("%s/p-%s.png" % (self.ImageDirectory, name))
             item.setIcon(icon)
 
     def loadProp(self, propPath):

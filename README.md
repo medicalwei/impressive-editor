@@ -13,7 +13,6 @@ Requirements (in Debian)
 ------------------------
 
 * python-qt4
-* imagemagick
 * poppler-utils
 
 ### Build Requirements
