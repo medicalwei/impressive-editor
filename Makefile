@@ -16,6 +16,7 @@ clean:
 install: impressiveEditorUI.py
 	mkdir -p ${INSTALL_DIR}/share/impressive-editor
 	mkdir -p ${INSTALL_DIR}/share/impressive-editor/locales
+	mkdir -p ${INSTALL_DIR}/share/impressive-editor/data
 	mkdir -p ${INSTALL_DIR}/share/pixmaps
 	mkdir -p ${INSTALL_DIR}/share/applications
 	mkdir -p ${INSTALL_DIR}/share/man/man1/
@@ -24,14 +25,15 @@ install: impressiveEditorUI.py
 	install -m755 impressive-editor.py ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 impressiveEditorUI.py ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 infoscript-tools.py ${INSTALL_DIR}/share/impressive-editor/
-	install -m644 loading.png ${INSTALL_DIR}/share/impressive-editor/
 	install -m644 locales/*.qm ${INSTALL_DIR}/share/impressive-editor/locales/
 
-	install -m644 data/impressive-editor.svg ${INSTALL_DIR}/share/pixmaps/
+	install -m644 data/loading.svg ${INSTALL_DIR}/share/impressive-editor/data/
+	install -m644 data/impressive-editor.svg ${INSTALL_DIR}/share/impressive-editor/data/
 	install -m644 data/impressive-editor.desktop ${INSTALL_DIR}/share/applications/
 	install -m644 data/impressive-editor.1 ${INSTALL_DIR}/share/man/man1/
 
 	ln -fs ${PREFIX}/share/impressive-editor/impressive-editor.py ${INSTALL_DIR}/bin/impressive-editor
+	ln -fs ${PREFIX}/share/impressive-editor/data/impressive-editor.svg ${INSTALL_DIR}/share/pixmaps/
 
 uninstall:
 	rm -rf ${PREFIX}/share/impressive-editor

@@ -4,70 +4,90 @@
 <context>
     <name>ImpressiveEditor</name>
     <message>
-        <location filename="impressive-editor.py" line="61"/>
+        <location filename="impressive-editor.py" line="72"/>
         <source>Not Specified</source>
         <translation>不指定</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="134"/>
+        <location filename="impressive-editor.py" line="165"/>
         <source>Save Info Script</source>
         <translation>儲存附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="149"/>
+        <location filename="impressive-editor.py" line="180"/>
         <source>Open Slide</source>
         <translation>開啟投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="170"/>
+        <location filename="impressive-editor.py" line="201"/>
         <source>Open Info Script</source>
         <translation>開啟附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="205"/>
+        <location filename="impressive-editor.py" line="236"/>
         <source>Slide</source>
         <translation>投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="208"/>
+        <location filename="impressive-editor.py" line="239"/>
         <source>Skipped</source>
         <translation>跳過</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="212"/>
+        <location filename="impressive-editor.py" line="243"/>
         <source>T</source>
         <translation>轉</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="216"/>
+        <location filename="impressive-editor.py" line="247"/>
         <source>T@</source>
         <translation>轉⌚</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="295"/>
+        <location filename="impressive-editor.py" line="325"/>
         <source>The script has been modified.</source>
         <translation>投影片資訊已被修改。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="275"/>
+        <location filename="impressive-editor.py" line="306"/>
         <source>Do you want to save your changes before start presentation?</source>
         <translation>是否要在開始簡報前儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="292"/>
+        <location filename="impressive-editor.py" line="322"/>
         <source>Do you want to save your changes?</source>
         <translation>是否要儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="282"/>
+        <location filename="impressive-editor.py" line="313"/>
         <source>Presentation cannot be started.</source>
         <translation>簡報無法開始。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="282"/>
+        <location filename="impressive-editor.py" line="313"/>
         <source>Presentation cannot be started.
 Make sure you have Impressive installed in your computer.</source>
         <translation>無法開始簡報。請確認您的電腦是否有安裝 Impressive。</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="365"/>
+        <source>About</source>
+        <translation>關於</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="365"/>
+        <source>Impressive Editor
+Editor for Impressive presentation tool
+
+Yao Wei &lt;mwei@lxde.org&gt;
+                    
+Licensed under GPL v2 (see COPYING or distro-specific locations for details)</source>
+        <translation>Impressive 編輯器
+Impressive 簡報工具程式的編輯器
+
+Yao Wei (魏銘廷) &lt;mwei@lxde.org&gt;
+
+本應用程式採 GPL v2 授權 (詳見 COPYING 或是發行版特定的版權宣告位置)</translation>
     </message>
 </context>
 <context>
@@ -113,92 +133,92 @@ Make sure you have Impressive installed in your computer.</source>
         <translation>簡報(&amp;P)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="140"/>
+        <location filename="impressiveEditorUI.ui" line="149"/>
         <source>Start &amp;Presentation</source>
         <translation>開始簡報(&amp;P)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="143"/>
+        <location filename="impressiveEditorUI.ui" line="152"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="151"/>
+        <location filename="impressiveEditorUI.ui" line="160"/>
         <source>&amp;Copy</source>
         <translation>複製(&amp;C)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="154"/>
+        <location filename="impressiveEditorUI.ui" line="163"/>
         <source>Ctrl+C</source>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="162"/>
+        <location filename="impressiveEditorUI.ui" line="171"/>
         <source>&amp;Paste</source>
         <translation>貼上(&amp;P)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="165"/>
+        <location filename="impressiveEditorUI.ui" line="174"/>
         <source>Ctrl+V</source>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="170"/>
+        <location filename="impressiveEditorUI.ui" line="179"/>
         <source>&amp;Open Presentation</source>
         <translation>開啟簡報(&amp;O)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="173"/>
+        <location filename="impressiveEditorUI.ui" line="182"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="181"/>
+        <location filename="impressiveEditorUI.ui" line="190"/>
         <source>Open &amp;Info File</source>
         <translation>開啟附加資訊(&amp;I)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="184"/>
+        <location filename="impressiveEditorUI.ui" line="193"/>
         <source>Ctrl+Shift+O</source>
         <translation>Ctrl+Shift+O</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="192"/>
+        <location filename="impressiveEditorUI.ui" line="201"/>
         <source>&amp;Save Info File</source>
         <translation>儲存附加資訊(&amp;S)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="195"/>
+        <location filename="impressiveEditorUI.ui" line="204"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="203"/>
+        <location filename="impressiveEditorUI.ui" line="212"/>
         <source>Save &amp;As</source>
         <translation>儲存為(&amp;A)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="206"/>
+        <location filename="impressiveEditorUI.ui" line="215"/>
         <source>Ctrl+Shift+S</source>
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="211"/>
+        <location filename="impressiveEditorUI.ui" line="220"/>
         <source>&amp;Quit</source>
         <translation>離開(&amp;Q)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="214"/>
+        <location filename="impressiveEditorUI.ui" line="223"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="222"/>
+        <location filename="impressiveEditorUI.ui" line="231"/>
         <source>Paste &amp;All</source>
         <translation>全部貼上(&amp;A)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="225"/>
+        <location filename="impressiveEditorUI.ui" line="234"/>
         <source>Ctrl+Shift+V</source>
         <translation>Ctrl+Shift+V</translation>
     </message>
@@ -213,24 +233,44 @@ Make sure you have Impressive installed in your computer.</source>
         <translation type="obsolete">是否要儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="233"/>
+        <location filename="impressiveEditorUI.ui" line="242"/>
         <source>&amp;Undo</source>
         <translation>還原 (&amp;U)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="236"/>
+        <location filename="impressiveEditorUI.ui" line="245"/>
         <source>Ctrl+Z</source>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="244"/>
+        <location filename="impressiveEditorUI.ui" line="253"/>
         <source>&amp;Redo</source>
         <translation>重做 (&amp;R)</translation>
     </message>
     <message>
-        <location filename="impressiveEditorUI.ui" line="247"/>
+        <location filename="impressiveEditorUI.ui" line="256"/>
         <source>Ctrl+Shift+Z</source>
         <translation>Ctrl+Shift+Z</translation>
+    </message>
+    <message>
+        <location filename="impressiveEditorUI.ui" line="135"/>
+        <source>&amp;Help</source>
+        <translation>說明(&amp;H)</translation>
+    </message>
+    <message>
+        <location filename="impressiveEditorUI.ui" line="261"/>
+        <source>&amp;Starter Guide</source>
+        <translation>新手指南 (&amp;S)</translation>
+    </message>
+    <message>
+        <location filename="impressiveEditorUI.ui" line="264"/>
+        <source>F1</source>
+        <translation>F1</translation>
+    </message>
+    <message>
+        <location filename="impressiveEditorUI.ui" line="269"/>
+        <source>&amp;About</source>
+        <translation>關於 (&amp;A)</translation>
     </message>
 </context>
 </TS>

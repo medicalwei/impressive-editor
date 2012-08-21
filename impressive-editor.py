@@ -64,7 +64,9 @@ class ImpressiveEditor:
         self.UI.setupUi(self.MainWindow)
 
         self.thumbnailLoader = ThumbnailLoader()
-        self.loadingIcon = QtGui.QIcon(os.path.dirname(os.path.realpath(sys.argv[0]))+"/loading.png")
+        self.loadingIcon = QtGui.QIcon(os.path.dirname(os.path.realpath(sys.argv[0]))+"/data/loading.svg")
+        self.windowIcon = QtGui.QIcon(os.path.dirname(os.path.realpath(sys.argv[0]))+"/data/impressive-editor.svg")
+        self.MainWindow.setWindowIcon(self.windowIcon)
 
         # set up transitions
         self.UI.transition.addItem(self.tr("Not Specified"), None)
@@ -82,6 +84,7 @@ class ImpressiveEditor:
         self.UI.actionStart.triggered.connect(self.startPresentation)
         self.UI.actionUndo.triggered.connect(self.undo)
         self.UI.actionRedo.triggered.connect(self.redo)
+        self.UI.actionAbout.triggered.connect(self.about)
         self.thumbnailLoader.finished.connect(self.reloadThumbnail)
 
     def start(self):
@@ -357,6 +360,16 @@ class ImpressiveEditor:
         global PageProps
         PageProps = self.historyRecorder.redo()
         self.postHistory()
+
+    def about(self, s):
+        QtGui.QMessageBox.about(self.MainWindow, self.tr("About"),
+                self.tr('''Impressive Editor
+Editor for Impressive presentation tool
+
+Yao Wei <mwei@lxde.org>
+                    
+Licensed under GPL v2 (see COPYING or distro-specific locations for details)''')
+                )
 
     def tr(self, s):
         return QtCore.QCoreApplication.translate("ImpressiveEditor", s)
