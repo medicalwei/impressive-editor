@@ -90,10 +90,6 @@ class ImpressiveEditor:
 
     def start(self):
         self.MainWindow.show()
-
-        if not settings.value("skipGuide").toBool():
-            self.guide(True)
-
         self.actionOpen()
 
     def connectConfigs(self):
@@ -167,7 +163,7 @@ class ImpressiveEditor:
         return True
 
     def actionSaveAs(self):
-        f = QtGui.QFileDialog.getSaveFileName(self.MainWindow, self.tr("Save Info Script"), "", "Info Script (*info)")
+        f = QtGui.QFileDialog.getSaveFileName(self.MainWindow, self.tr("Save Info Script"), "", self.tr("Info Script (*.info)"))
         if not f:
             return False
         SaveInfoScript(str(f))
@@ -182,7 +178,7 @@ class ImpressiveEditor:
         impressiveEditor.saveCheck(self.actionOpenCall)
 
     def actionOpenCall(self):
-        f = QtGui.QFileDialog.getOpenFileName(self.MainWindow, self.tr("Open Slide"), "", "PDF (*.pdf)")
+        f = QtGui.QFileDialog.getOpenFileName(self.MainWindow, self.tr("Open PDF Slide"), "", self.tr("PDF (*.pdf)"))
         if not f:
             return False
 
@@ -203,7 +199,7 @@ class ImpressiveEditor:
         impressiveEditor.saveCheck(self.actionOpenInfoCall)
 
     def actionOpenInfoCall(self):
-        f = QtGui.QFileDialog.getOpenFileName(self.MainWindow, self.tr("Open Info Script"), "", "Info Script (*.info)")
+        f = QtGui.QFileDialog.getOpenFileName(self.MainWindow, self.tr("Open Info Script"), "", self.tr("Info Script (*.info)"))
         if not f:
             return
 
@@ -311,6 +307,10 @@ class ImpressiveEditor:
         self.saveCheck(self.startPresentationCall, None, self.tr("Do you want to save your changes before start presentation?"))
 
     def startPresentationCall(self):
+        # showing guide
+        if not settings.value("skipGuide").toBool():
+            self.guide(True)
+
         # TODO: need impressive path
         try:
             subprocess.call(['impressive', '--script', InfoScriptPath, self.FilePath])
@@ -397,15 +397,10 @@ Dragging with <b>Right Mouse Button</b> when Zooming &mdash; Panning
 ''')
         messageBox = QtGui.QMessageBox(QtGui.QMessageBox.NoIcon, title, message, QtGui.QMessageBox.Ok, self.MainWindow)
         if init:
-            never = messageBox.addButton(self.tr("Don't show this message at startup"), QtGui.QMessageBox.NoRole)
+            never = messageBox.addButton(self.tr("Don't show this message again"), QtGui.QMessageBox.NoRole)
             messageBox.exec_()
             if messageBox.clickedButton() == never:
                 settings.setValue("skipGuide", True)
-        elif settings.value("skipGuide").toBool():
-            showup = messageBox.addButton(self.tr("Show this message at startup"), QtGui.QMessageBox.YesRole)
-            messageBox.exec_()
-            if messageBox.clickedButton() == showup:
-                settings.setValue("skipGuide", False)
         else:
             messageBox.exec_()
 

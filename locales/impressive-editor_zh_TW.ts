@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="zh_TW">
+<!DOCTYPE TS><TS version="2.0" language="zh_TW" sourcelanguage="">
 <context>
     <name>ImpressiveEditor</name>
     <message>
@@ -9,37 +8,32 @@
         <translation>不指定</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="170"/>
+        <location filename="impressive-editor.py" line="166"/>
         <source>Save Info Script</source>
         <translation>儲存附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="185"/>
-        <source>Open Slide</source>
-        <translation>開啟投影片</translation>
-    </message>
-    <message>
-        <location filename="impressive-editor.py" line="206"/>
+        <location filename="impressive-editor.py" line="202"/>
         <source>Open Info Script</source>
         <translation>開啟附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="241"/>
+        <location filename="impressive-editor.py" line="237"/>
         <source>Slide</source>
         <translation>投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="244"/>
+        <location filename="impressive-editor.py" line="240"/>
         <source>Skipped</source>
         <translation>跳過</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="248"/>
+        <location filename="impressive-editor.py" line="244"/>
         <source>T</source>
         <translation>轉</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="252"/>
+        <location filename="impressive-editor.py" line="248"/>
         <source>T@</source>
         <translation>轉⌚</translation>
     </message>
@@ -49,7 +43,7 @@
         <translation>投影片資訊已被修改。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="311"/>
+        <location filename="impressive-editor.py" line="307"/>
         <source>Do you want to save your changes before start presentation?</source>
         <translation>是否要在開始簡報前儲存您的變更？</translation>
     </message>
@@ -131,14 +125,24 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
 (詳見 COPYING 或是發行版特定的版權宣告位置)&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="400"/>
-        <source>Don&apos;t show this message at startup</source>
-        <translation>啟動時不顯示此訊息</translation>
+        <location filename="impressive-editor.py" line="181"/>
+        <source>Open PDF Slide</source>
+        <translation>開啟 PDF 投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="405"/>
-        <source>Show this message at startup</source>
-        <translation>啟動時顯示此訊息</translation>
+        <location filename="impressive-editor.py" line="181"/>
+        <source>PDF (*.pdf)</source>
+        <translation>PDF 可攜式文件格式 (*.pdf)</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="202"/>
+        <source>Info Script (*.info)</source>
+        <translation>投影片資訊檔案 (*.info)</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="400"/>
+        <source>Don&apos;t show this message again</source>
+        <translation>不要再顯示此訊息</translation>
     </message>
 </context>
 <context>
@@ -212,11 +216,6 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
         <location filename="impressiveEditorUI.ui" line="174"/>
         <source>Ctrl+V</source>
         <translation>Ctrl+V</translation>
-    </message>
-    <message>
-        <location filename="impressiveEditorUI.ui" line="179"/>
-        <source>&amp;Open Presentation</source>
-        <translation>開啟簡報(&amp;O)</translation>
     </message>
     <message>
         <location filename="impressiveEditorUI.ui" line="182"/>
@@ -312,6 +311,11 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
         <location filename="impressiveEditorUI.ui" line="269"/>
         <source>&amp;About</source>
         <translation>關於 (&amp;A)</translation>
+    </message>
+    <message>
+        <location filename="impressiveEditorUI.ui" line="179"/>
+        <source>&amp;Open PDF Slide</source>
+        <translation>開啟 PDF 投影片 (&amp;O)</translation>
     </message>
 </context>
 </TS>
