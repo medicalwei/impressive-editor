@@ -9,78 +9,78 @@
         <translation>不指定</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="166"/>
+        <location filename="impressive-editor.py" line="170"/>
         <source>Save Info Script</source>
         <translation>儲存附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="181"/>
+        <location filename="impressive-editor.py" line="185"/>
         <source>Open Slide</source>
         <translation>開啟投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="202"/>
+        <location filename="impressive-editor.py" line="206"/>
         <source>Open Info Script</source>
         <translation>開啟附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="237"/>
+        <location filename="impressive-editor.py" line="241"/>
         <source>Slide</source>
         <translation>投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="240"/>
+        <location filename="impressive-editor.py" line="244"/>
         <source>Skipped</source>
         <translation>跳過</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="244"/>
+        <location filename="impressive-editor.py" line="248"/>
         <source>T</source>
         <translation>轉</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="248"/>
+        <location filename="impressive-editor.py" line="252"/>
         <source>T@</source>
         <translation>轉⌚</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="326"/>
+        <location filename="impressive-editor.py" line="330"/>
         <source>The script has been modified.</source>
         <translation>投影片資訊已被修改。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="307"/>
+        <location filename="impressive-editor.py" line="311"/>
         <source>Do you want to save your changes before start presentation?</source>
         <translation>是否要在開始簡報前儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="323"/>
+        <location filename="impressive-editor.py" line="327"/>
         <source>Do you want to save your changes?</source>
         <translation>是否要儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="314"/>
+        <location filename="impressive-editor.py" line="318"/>
         <source>Presentation cannot be started.</source>
         <translation>簡報無法開始。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="314"/>
+        <location filename="impressive-editor.py" line="318"/>
         <source>Presentation cannot be started.
 Make sure you have Impressive installed in your computer.</source>
         <translation>無法開始簡報。請確認您的電腦是否有安裝 Impressive。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="366"/>
+        <location filename="impressive-editor.py" line="370"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="376"/>
+        <location filename="impressive-editor.py" line="380"/>
         <source>Starter Guide</source>
         <translation>新手指南</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="376"/>
+        <location filename="impressive-editor.py" line="381"/>
         <source>
 &lt;p&gt;Impressive itself is a simple presentation tool which makes PDF vivid.&lt;/p&gt;
 &lt;h2&gt;Basics&lt;/h2&gt;
@@ -115,7 +115,7 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
 放大時以&lt;b&gt;滑鼠右鍵&lt;/b&gt;拖曳 &amp;mdash;&amp;mdash; 移動放大範圍</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="366"/>
+        <location filename="impressive-editor.py" line="370"/>
         <source>&lt;h1&gt;Impressive Editor&lt;/h1&gt;
 &lt;p&gt;Editor for Impressive presentation tool&lt;/p&gt;
 &lt;p&gt;Yao Wei &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
@@ -129,6 +129,16 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
 &lt;p&gt;&lt;a href=&quot;https://github.com/medicalwei/impressive-editor&quot;&gt;在 GitHub 取得本軟體的原始碼或回報問題&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本應用程式採 GNU GPL v2 授權&lt;br&gt;
 (詳見 COPYING 或是發行版特定的版權宣告位置)&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="400"/>
+        <source>Don&apos;t show this message at startup</source>
+        <translation>啟動時不顯示此訊息</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="405"/>
+        <source>Show this message at startup</source>
+        <translation>啟動時顯示此訊息</translation>
     </message>
 </context>
 <context>

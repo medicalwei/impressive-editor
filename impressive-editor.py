@@ -397,10 +397,15 @@ Dragging with <b>Right Mouse Button</b> when Zooming &mdash; Panning
 ''')
         messageBox = QtGui.QMessageBox(QtGui.QMessageBox.NoIcon, title, message, QtGui.QMessageBox.Ok, self.MainWindow)
         if init:
-            never = messageBox.addButton(self.tr("Don't show this message again"), QtGui.QMessageBox.NoRole)
+            never = messageBox.addButton(self.tr("Don't show this message at startup"), QtGui.QMessageBox.NoRole)
             messageBox.exec_()
             if messageBox.clickedButton() == never:
                 settings.setValue("skipGuide", True)
+        elif settings.value("skipGuide").toBool():
+            showup = messageBox.addButton(self.tr("Show this message at startup"), QtGui.QMessageBox.YesRole)
+            messageBox.exec_()
+            if messageBox.clickedButton() == showup:
+                settings.setValue("skipGuide", False)
         else:
             messageBox.exec_()
 
