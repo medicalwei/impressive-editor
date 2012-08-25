@@ -182,7 +182,7 @@ class ImpressiveEditor:
         if not f:
             return False
 
-        self.FilePath = str(f)
+        self.FilePath = str(f.toUtf8())
         propPath = self.FilePath + ".info"
 
         self.loadProp(propPath)
@@ -398,6 +398,7 @@ Dragging with <b>Right Mouse Button</b> when Zooming &mdash; Panning
 if __name__ == "__main__":
     import sys
     global impressiveEditor
+    QtCore.QTextCodec.setCodecForCStrings(QtCore.QTextCodec.codecForName("UTF-8"))
     app = QtGui.QApplication(sys.argv)
 
     locale = QtCore.QLocale.system().name()
