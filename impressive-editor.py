@@ -90,6 +90,10 @@ class ImpressiveEditor:
 
     def start(self):
         self.MainWindow.show()
+
+        if not settings.value("skipGuide").toBool():
+            self.guide(True)
+
         self.actionOpen()
 
     def connectConfigs(self):
@@ -372,9 +376,9 @@ class ImpressiveEditor:
 (see COPYING or distro-specific locations for details)</p>
 '''))
 
-    def guide(self, s):
-        QtGui.QMessageBox.information(self.MainWindow, self.tr("Starter Guide"),
-                self.tr('''
+    def guide(self, init):
+        title = self.tr("Starter Guide")
+        message = self.tr('''
 <p>Impressive itself is a simple presentation tool which makes PDF vivid.</p>
 <h2>Basics</h2>
 <b>F5</b> &mdash; Start Presentation<br>
@@ -390,7 +394,15 @@ Drag Rectangle with <b>Left Mouse Button</b> &mdash; Focus<br>
 <h2>Zooming</h2>
 <b>Z</b> &mdash; Toggle Zooming<br>
 Dragging with <b>Right Mouse Button</b> when Zooming &mdash; Panning
-'''))
+''')
+        messageBox = QtGui.QMessageBox(QtGui.QMessageBox.NoIcon, title, message, QtGui.QMessageBox.Ok, self.MainWindow)
+        if init:
+            never = messageBox.addButton(self.tr("Don't show this message again"), QtGui.QMessageBox.NoRole)
+            messageBox.exec_()
+            if messageBox.clickedButton() == never:
+                settings.setValue("skipGuide", True)
+        else:
+            messageBox.exec_()
 
     def tr(self, s):
         return QtCore.QCoreApplication.translate("ImpressiveEditor", s)
@@ -400,6 +412,9 @@ if __name__ == "__main__":
     global impressiveEditor
     QtCore.QTextCodec.setCodecForCStrings(QtCore.QTextCodec.codecForName("UTF-8"))
     app = QtGui.QApplication(sys.argv)
+
+    global settings
+    settings = QtCore.QSettings("impressive-editor")
 
     locale = QtCore.QLocale.system().name()
     qtTranslator = QtCore.QTranslator()
