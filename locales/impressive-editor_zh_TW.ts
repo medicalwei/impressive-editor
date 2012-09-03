@@ -1,80 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="zh_TW" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="zh_TW">
 <context>
     <name>ImpressiveEditor</name>
     <message>
-        <location filename="impressive-editor.py" line="72"/>
+        <location filename="impressive-editor.py" line="74"/>
         <source>Not Specified</source>
         <translation>不指定</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="166"/>
+        <location filename="impressive-editor.py" line="197"/>
         <source>Save Info Script</source>
         <translation>儲存附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="202"/>
+        <location filename="impressive-editor.py" line="227"/>
         <source>Open Info Script</source>
         <translation>開啟附加資訊</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="237"/>
+        <location filename="impressive-editor.py" line="261"/>
         <source>Slide</source>
         <translation>投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="240"/>
+        <location filename="impressive-editor.py" line="264"/>
         <source>Skipped</source>
         <translation>跳過</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="244"/>
+        <location filename="impressive-editor.py" line="268"/>
         <source>T</source>
         <translation>轉</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="248"/>
+        <location filename="impressive-editor.py" line="272"/>
         <source>T@</source>
         <translation>轉⌚</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="330"/>
+        <location filename="impressive-editor.py" line="354"/>
         <source>The script has been modified.</source>
         <translation>投影片資訊已被修改。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="307"/>
+        <location filename="impressive-editor.py" line="331"/>
         <source>Do you want to save your changes before start presentation?</source>
         <translation>是否要在開始簡報前儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="327"/>
+        <location filename="impressive-editor.py" line="351"/>
         <source>Do you want to save your changes?</source>
         <translation>是否要儲存您的變更？</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="318"/>
+        <location filename="impressive-editor.py" line="342"/>
         <source>Presentation cannot be started.</source>
         <translation>簡報無法開始。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="318"/>
+        <location filename="impressive-editor.py" line="342"/>
         <source>Presentation cannot be started.
 Make sure you have Impressive installed in your computer.</source>
         <translation>無法開始簡報。請確認您的電腦是否有安裝 Impressive。</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="370"/>
+        <location filename="impressive-editor.py" line="394"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="380"/>
+        <location filename="impressive-editor.py" line="404"/>
         <source>Starter Guide</source>
         <translation>新手指南</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="381"/>
+        <location filename="impressive-editor.py" line="405"/>
         <source>
 &lt;p&gt;Impressive itself is a simple presentation tool which makes PDF vivid.&lt;/p&gt;
 &lt;h2&gt;Basics&lt;/h2&gt;
@@ -109,7 +110,7 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
 放大時以&lt;b&gt;滑鼠右鍵&lt;/b&gt;拖曳 &amp;mdash;&amp;mdash; 移動放大範圍</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="370"/>
+        <location filename="impressive-editor.py" line="394"/>
         <source>&lt;h1&gt;Impressive Editor&lt;/h1&gt;
 &lt;p&gt;Editor for Impressive presentation tool&lt;/p&gt;
 &lt;p&gt;Yao Wei &amp;lt;&lt;a href=&quot;mailto:mwei@lxde.org&quot;&gt;mwei@lxde.org&lt;/a&gt;&amp;gt;&lt;/p&gt;
@@ -125,24 +126,34 @@ Dragging with &lt;b&gt;Right Mouse Button&lt;/b&gt; when Zooming &amp;mdash; Pan
 (詳見 COPYING 或是發行版特定的版權宣告位置)&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="181"/>
+        <location filename="impressive-editor.py" line="212"/>
         <source>Open PDF Slide</source>
         <translation>開啟 PDF 投影片</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="181"/>
+        <location filename="impressive-editor.py" line="212"/>
         <source>PDF (*.pdf)</source>
         <translation>PDF 可攜式文件格式 (*.pdf)</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="202"/>
+        <location filename="impressive-editor.py" line="227"/>
         <source>Info Script (*.info)</source>
         <translation>投影片資訊檔案 (*.info)</translation>
     </message>
     <message>
-        <location filename="impressive-editor.py" line="400"/>
+        <location filename="impressive-editor.py" line="424"/>
         <source>Don&apos;t show this message again</source>
         <translation>不要再顯示此訊息</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="130"/>
+        <source>This file cannot be opened.</source>
+        <translation>無法開啟這個檔案。</translation>
+    </message>
+    <message>
+        <location filename="impressive-editor.py" line="130"/>
+        <source>Impressive Editor cannot open this file for presentation.</source>
+        <translation>Impressive 編輯器無法開啟此檔案進行簡報。</translation>
     </message>
 </context>
 <context>
