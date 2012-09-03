@@ -11,6 +11,7 @@ import os
 import copy
 import re
 import math
+import argparse
 
 execfile(os.path.dirname(os.path.realpath(sys.argv[0]))+"/infoscript-tools.py")
 
@@ -53,10 +54,11 @@ class HistoryRecorder():
         return len(self.redoList)
 
 class ImpressiveEditor:
-    def __init__(self):
+    def __init__(self, args):
         self.ImageDirectory = ""
         self.currentSelected = -1
         self.notSaved = False
+        self.args = args
 
         self.MainWindow = MainWindow()
         self.UI = impressiveEditorUI.Ui_MainWindow()
@@ -90,7 +92,19 @@ class ImpressiveEditor:
 
     def start(self):
         self.MainWindow.show()
-        self.actionOpen()
+
+        if self.args.filepath:
+            if self.args.infopath:
+                self.loadProp(self.args.infopath)
+            else:
+                self.loadProp(self.args.filepath+".info")
+
+            self.loadSlide(self.args.filepath)
+
+            if self.args.start:
+                self.startPresentation()
+        else:
+            self.actionOpen()
 
     def connectConfigs(self):
         self.UI.skipThisSlide.stateChanged.connect(self.skipThisSlideChanged)
@@ -105,11 +119,23 @@ class ImpressiveEditor:
         except:
             pass
 
-    def loadSlide(self):
+    def loadSlide(self, filePath):
         try:
             self.UI.slides.currentItemChanged.disconnect()
         except:
             pass
+
+        info = subprocess.Popen(['file', filePath], stdout=subprocess.PIPE).communicate()[0]
+        if info.find("PDF document") == -1:
+            QtGui.QMessageBox.critical(
+                self.MainWindow,
+                self.tr("This file cannot be opened."),
+                self.tr("Impressive Editor cannot open this file for presentation."),
+                QtGui.QMessageBox.Ok
+                )
+            return
+
+        self.FilePath = filePath
         self.cleanTemp()
         self.UI.slides.clear()
         self.thumbnailLoader.terminate()
@@ -141,6 +167,11 @@ class ImpressiveEditor:
         self.UI.slides.setIconSize(thumbnailQSize)
 
         self.thumbnailLoader.start()
+
+        self.UI.actionOpenInfo.setEnabled(True)
+        self.UI.actionSave.setEnabled(True)
+        self.UI.actionSaveAs.setEnabled(True)
+        self.UI.actionCopy.setEnabled(True)
 
     def reloadThumbnail(self):
         zfillRate = int(math.log10(self.count+1))+1
@@ -182,16 +213,10 @@ class ImpressiveEditor:
         if not f:
             return False
 
-        self.FilePath = str(f.toUtf8())
-        propPath = self.FilePath + ".info"
-
+        filePath = str(f.toUtf8())
+        propPath = filePath + ".info"
         self.loadProp(propPath)
-        self.loadSlide()
-
-        self.UI.actionOpenInfo.setEnabled(True)
-        self.UI.actionSave.setEnabled(True)
-        self.UI.actionSaveAs.setEnabled(True)
-        self.UI.actionCopy.setEnabled(True)
+        self.loadSlide(filePath)
 
         return True
 
@@ -203,8 +228,7 @@ class ImpressiveEditor:
         if not f:
             return
 
-        propPath = str(f)
-        self.loadProp(propPath)
+        self.loadProp(str(f))
 
     def actionQuit(self):
         self.MainWindow.close()
@@ -315,25 +339,25 @@ class ImpressiveEditor:
         try:
             subprocess.call(['impressive', '--script', InfoScriptPath, self.FilePath])
         except OSError:
-            ret = QtGui.QMessageBox.critical(
-                    self.MainWindow,
-                    self.tr("Presentation cannot be started."),
-                    self.tr("Presentation cannot be started.\nMake sure you have Impressive installed in your computer."),
-                    QtGui.QMessageBox.Ok
-                    )
+            QtGui.QMessageBox.critical(
+                self.MainWindow,
+                self.tr("Presentation cannot be started."),
+                self.tr("Presentation cannot be started.\nMake sure you have Impressive installed in your computer."),
+                QtGui.QMessageBox.Ok
+                )
 
     def saveCheck(self, accept, cancel=None, message=None):
         if not message:
             message = self.tr("Do you want to save your changes?")
 
         if self.notSaved:
-            ret = QtGui.QMessageBox.information(
-                    self.MainWindow,
-                    self.tr("The script has been modified."),
-                    message,
-                    QtGui.QMessageBox.Save | QtGui.QMessageBox.Discard | QtGui.QMessageBox.Cancel,
-                    QtGui.QMessageBox.Save
-                    )
+            QtGui.QMessageBox.information(
+                self.MainWindow,
+                self.tr("The script has been modified."),
+                message,
+                QtGui.QMessageBox.Save | QtGui.QMessageBox.Discard | QtGui.QMessageBox.Cancel,
+                QtGui.QMessageBox.Save
+                )
 
             if ret == QtGui.QMessageBox.Cancel:
                 if cancel:
@@ -408,8 +432,14 @@ Dragging with <b>Right Mouse Button</b> when Zooming &mdash; Panning
         return QtCore.QCoreApplication.translate("ImpressiveEditor", s)
 
 if __name__ == "__main__":
-    import sys
     global impressiveEditor
+    
+    parser = argparse.ArgumentParser(description='Display and Edit effects on PDF slides. Front-end of Impressive presentation tool.')
+    parser.add_argument('filepath', metavar='pdfpath', type=str, nargs='?', help='path to your PDF slides')
+    parser.add_argument('-i', '--infopath', metavar='infopath', dest='infopath', type=str, nargs=1, help='path to your info script for the slides')
+    parser.add_argument('-s', '--start', dest='start', action='store_true', help='start presentation immediately')
+    args = parser.parse_args()
+
     QtCore.QTextCodec.setCodecForCStrings(QtCore.QTextCodec.codecForName("UTF-8"))
     app = QtGui.QApplication(sys.argv)
 
@@ -427,7 +457,7 @@ if __name__ == "__main__":
     if qtTranslator.load("qt_"+locale, QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.TranslationsPath)):
         app.installTranslator(qtTranslator)
 
-    impressiveEditor = ImpressiveEditor()
+    impressiveEditor = ImpressiveEditor(args)
     impressiveEditor.start()
     ret = app.exec_()
     impressiveEditor.thumbnailLoader.terminate()

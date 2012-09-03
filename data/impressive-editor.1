@@ -1,18 +1,47 @@
 .TH IMPRESSIVE-EDITOR 1 "August 20, 2012"
+
 .SH NAME
 impressive-editor \- Editor for Impressive presentation tool
+
 .SH SYNOPSIS
 .B impressive-editor
+.RB [\| \-h \|] 
+.RB [\| \-i
+.IR infopath \|]
+.RB [\| \-s \|] 
+.RI [\| pdfpath \|]
+
 .SH DESCRIPTION
-impressive-editor is dirty hack to make a frontend of impressive presentation
-tool for those who are too lazy to launch a terminal.
+Display and Edit effects on PDF slides. Front-end of Impressive presentation
+tool.
 .P
 Impressive is a convenient presentation tool, but it must use command line to
 launch and is very difficult to configure slides. Currently, impressive-editor
 allows users to set transitions, transition time and hide on slides, and start
 presentation directly on the UI.
+
+.SH OPTIONS
+
+.SS "positional arguments"
+.TP
+.I pdfpath            
+path to your PDF slides
+
+.SS "optional arguments"
+.TP
+.BR \-h ", " \-\-help
+show help message and exit
+.TP
+\fB\-i \fIinfopath\fR, \fB\-\-infopath \fIinfopath
+path to your info script for the slides
+.TP
+.BR \-s ", " \-\-start
+start presentation immediately
+
+
 .SH SEE ALSO
-.BR impressive (1),
+.BR impressive (1), 
+.BR impressive-gettransitions (1)
 .SH AUTHOR
 The programs is written and documented by Yao Wei <mwei@lxde.org>, with
 parts of the code from Impress Martin J. Fiedler <martin.fiedler@gmx.net>.
