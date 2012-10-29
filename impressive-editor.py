@@ -351,7 +351,7 @@ class ImpressiveEditor:
             message = self.tr("Do you want to save your changes?")
 
         if self.notSaved:
-            QtGui.QMessageBox.information(
+            ret = QtGui.QMessageBox.information(
                 self.MainWindow,
                 self.tr("The script has been modified."),
                 message,
